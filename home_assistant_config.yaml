@@ -1,0 +1,7 @@
+# Home Assistant MQTT Sensor Configuration
+sensor:
+  - platform: mqtt
+    name: "Deepika Temperature Sensor"
+    state_topic: "deepika42130115/homeassistant/sensor"
+    unit_of_measurement: "°C"
+    value_template: "{{ value }}"

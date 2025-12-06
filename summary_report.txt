@@ -1,0 +1,5 @@
+Assignment: MQTT Sensor + Home Assistant  
+Student: Deepika Kumari  
+Register Number: 42130115  
+
+This assignment demonstrates publishing sensor data using MQTT and integrating it into Home Assistant. A Python script publishes random sensor values to an MQTT broker. Home Assistant subscribes to the topic and displays the sensor readings in the dashboard.
