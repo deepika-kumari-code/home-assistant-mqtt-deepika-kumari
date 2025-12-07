@@ -1,7 +1,23 @@
-# Home Assistant MQTT Sensor Configuration
+
+mqtt:
+  broker: localhost
+  port: 1883
+
 sensor:
   - platform: mqtt
-    name: "Deepika Temperature Sensor"
-    state_topic: "deepika42130115/homeassistant/sensor"
+    name: "Assignment Temperature"
+    state_topic: "home/deepika-2025/sensor"
+    value_template: "{{ value_json.temperature }}"
     unit_of_measurement: "°C"
-    value_template: "{{ value }}"
+
+  - platform: mqtt
+    name: "Assignment Humidity"
+    state_topic: "home/deepika-2025/sensor"
+    value_template: "{{ value_json.humidity }}"
+    unit_of_measurement: "%"
+
+  - platform: mqtt
+    name: "Assignment Light"
+    state_topic: "home/deepika-2025/sensor"
+    value_template: "{{ value_json.light }}"
+    unit_of_measurement: "lx"
